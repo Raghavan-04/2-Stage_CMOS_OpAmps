@@ -17,7 +17,6 @@ Slew Rate (SR)	5 V/$\mu$sec	$\ge$ 42 V/$\mu$sec
 ### Design Methodology & Sizing
 The sizing of MOSFETs follows a structured analytical approach. For the two-stage design, Miller Compensation and Pole-Splitting techniques were employed to maintain stability.
 
----
 #### Key Design Equations
 1.  Bias Current ($I_5$): Derived from the Slew Rate requirement: $I_5 = SR \cdot C_c$. 
 2.  Transconductance ($g_m$): Defined by the GBW: $g_{m1,2} = GB \times C_c$. 
