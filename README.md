@@ -1,5 +1,5 @@
 
-## Project Title: Design and Analysis of 1-Stage and 2-Stage CMOS Op-Amps
+## Design and Analysis of 1-Stage and 2-Stage CMOS Op-Amps
 Technology: gpdk180 (180nm) | Supply Voltage: 1.8V
 ### Introduction
 This project explores the design, sizing, and simulation of high-performance Operational Amplifiers (Op-Amps). An Op-Amp is a high-gain differential amplifier used for signal amplification and analog processing. The repository provides a direct performance comparison between a Single-Stage Differential Pair and a Two-Stage Miller-Compensated Op-Amp.
