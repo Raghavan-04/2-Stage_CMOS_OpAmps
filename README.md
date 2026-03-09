@@ -15,8 +15,8 @@ Gain	$\ge$ 40 dB	60 dB
 Gain Bandwidth (GBW)	$\ge$ 5 MHz	30 MHz
 Slew Rate (SR)	5 V/$\mu$sec	$\ge$ 42 V/$\mu$sec
 ### Design Methodology & Sizing
-
 The sizing of MOSFETs follows a structured analytical approach. For the two-stage design, Miller Compensation and Pole-Splitting techniques were employed to maintain stability.
+
 ---
 #### Key Design Equations
 1.  Bias Current ($I_5$): Derived from the Slew Rate requirement: $I_5 = SR \cdot C_c$. 
