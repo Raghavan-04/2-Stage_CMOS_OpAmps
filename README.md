@@ -3,10 +3,10 @@
 
 An analog IC design project comparing a Single-Stage Op-Amp and a Two-Stage Miller-Compensated Op-Amp using the **gpdk180 (180nm) technology node**.
 
-## 🏫 Institutional Affiliation
+##  Institutional Affiliation
 * **College:** PSG College of Technology, Coimbatore
 
-## 👥 Project Team
+##  Project Team
 * **Mithun Hari** (22L232)
 * **Raghavan** (22L255)
 * **Vijhay Valliappan** (22L280)
@@ -14,10 +14,10 @@ An analog IC design project comparing a Single-Stage Op-Amp and a Two-Stage Mill
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 This project focuses on the comparative analysis, transistor sizing, and simulation verification of a Single-Stage Operational Amplifier and a Two-Stage Miller-Compensated Operational Amplifier. Both topologies were designed to meet target specifications using manual sizing workflows and validated inside Cadence Virtuoso using the Spectre simulation platform.
 
-### 🏗️ Op-Amp Architectural Block Diagram
+###  Op-Amp Architectural Block Diagram
 A typical internal multi-stage structure of an operational amplifier consists of an input differential stage, intermediate gain stage, level shifter, and an output buffer stage.
 
 <p align="center">
@@ -25,7 +25,7 @@ A typical internal multi-stage structure of an operational amplifier consists of
 </p>
 
 ---
-## 📊 Comparative Performance Matrix
+##  Comparative Performance Matrix
 
 | Performance Parameter | 1-Stage Op-Amp | 2-Stage Op-Amp | Analysis & Insights |
 |:---|:---:|:---:|:---|
@@ -38,7 +38,7 @@ A typical internal multi-stage structure of an operational amplifier consists of
 
 ---
 
-## 🛠️ Circuit 1: Single-Stage Op-Amp Design
+## Single-Stage Op-Amp Design
 
 The single-stage architecture implements a dual-input balanced-output differential amplifier paired with active load current mirrors to maximize common-mode rejection and initial gain.
 
@@ -58,7 +58,7 @@ The single-stage architecture implements a dual-input balanced-output differenti
   <img src="1_stage_gain_phase.png" width="85%" alt="1-Stage Gain and Phase Margin" />
 </p>
 
-**1. Differential Gain**                                    **2. Common Gain**
+** Differential Gain & Common Gain **
 
 
 
@@ -69,22 +69,26 @@ The single-stage architecture implements a dual-input balanced-output differenti
 
 ---
 
-## 🛠️ Circuit 2: Two-Stage Op-Amp Design
+##  Two-Stage Op-Amp Design
 
 The two-stage configuration splits voltage amplification into an initial input differential stage followed by a common-source output stage. **Miller Compensation ($C_c$)** and **Pole-Splitting** techniques are used to isolate dominant and non-dominant poles to maintain feedback loop stability.
 
-### 📐 Final Sizing Parameters
+###  Final Sizing Parameters
 * **Transistor Ratios:** $M1, M2 = 6$ | $M3, M4 = 8$ | $M5 = 124.56$ | $M6 = 31.14$ | $M7, M8 = 4$
 
-### 🖥️ Schematic Capture
+### Schematic Capture
 <p align="center">
   <img src="2_stage_schematic.png" width="85%" alt="2-Stage Schematic" />
 </p>
 
-### 📈 AC Characterization Waveforms
+###  AC Characterization Waveforms
+
+**Phase Gain**
+
 <p align="center">
   <img src="2_stage_gain_phase.png" width="85%" alt="2-Stage Gain and Phase Margin" />
 </p>
+** Differential Gain & Common Gain **
 
 <p align="center">
   <img src="2_stage_differential_gain.png" width="48%" alt="2-Stage Differential Gain" />
@@ -93,11 +97,11 @@ The two-stage configuration splits voltage amplification into an initial input d
 
 ---
 
-## 💡 Key Engineering Takeaways
+##  Key Engineering Takeaways
 1. **The Gain-Stability Dilemma:** The single-stage topology functions effectively as a single-pole system, yielding near-perfect stability ($PM \approx 89.5^\circ$) but bounding your open-loop gain to $40.8\text{ dB}$. Reconfiguring into a 2-stage architecture successfully boosts the open-loop gain to $59.85\text{ dB}$ and scales the bandwidth to $30.29\text{ MHz}$, while maintaining stability above design constraints ($PM = 47.25^\circ$).
 2. **Transient Optimization:** By utilizing targeted compensation networks, the 2-stage design achieves an **8x transient speed acceleration in Slew Rate** ($42.50\text{ V/}\mu\text{s}$) over the initial single-stage benchmark ($5.32\text{ V/}\mu\text{s}$).
 
-## ⚙️ CAD Software Used
+##  CAD Software Used
 * **Cadence Virtuoso** (Schematic Capture)
 * **Spectre Simulation Platform** (AC, Transient, & Common Mode Analysis)
 
