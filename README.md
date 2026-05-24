@@ -1,16 +1,16 @@
 # Design and Verification of 1-Stage and 2-Stage Operational Amplifiers
 
-An analog IC design project comparing a Single-Stage Op-Amp and a Two-Stage Miller-Compensated Op-Amp using the **gpdk180 (180nm) technology node**[cite: 1].
+An analog IC design project comparing a Single-Stage Op-Amp and a Two-Stage Miller-Compensated Op-Amp using the **gpdk180 (180nm) technology node**.
 
 ## 🏫 Institutional Affiliation
-* **College:** PSG College of Technology, Coimbatore[cite: 1]
-* **Batch:** Batch 14[cite: 1]
+* **College:** PSG College of Technology, Coimbatore
+  
 
 ## 👥 Project Team
-* **Mithun Hari** (22L232)[cite: 1]
-* **Raghavan** (22L255)[cite: 1]
-* **Vijhay Valliappan** (22L280)[cite: 1]
-* **Thughilan** (22L284)[cite: 1]
+* **Mithun Hari** (22L232)
+* **Raghavan** (22L255)
+* **Vijhay Valliappan** (22L280)
+* **Thughilan** (22L284)
 
 ---
 
@@ -18,7 +18,7 @@ An analog IC design project comparing a Single-Stage Op-Amp and a Two-Stage Mill
 This project focuses on the comparative analysis, transistor sizing, and simulation verification of a Single-Stage Operational Amplifier and a Two-Stage Miller-Compensated Operational Amplifier[cite: 1]. Both topologies were designed to meet target specifications using manual sizing workflows and validated inside Cadence Virtuoso using the Spectre simulation platform[cite: 1].
 
 ### 🏗️ Op-Amp Architectural Block Diagram
-A typical internal multi-stage structure of an operational amplifier consists of an input differential stage, intermediate gain stage, level shifter, and an output buffer stage[cite: 1].
+A typical internal multi-stage structure of an operational amplifier consists of an input differential stage, intermediate gain stage, level shifter, and an output buffer stage.
 
 <p align="center">
   <img src="block_diagram.png" width="85%" alt="Op-Amp Block Diagram" />
@@ -30,7 +30,7 @@ A typical internal multi-stage structure of an operational amplifier consists of
 
 | Performance Parameter | 1-Stage Op-Amp | 2-Stage Op-Amp | Analysis & Insights |
 | :--- | :---: | :---: | :--- |
-| **DC Differential Gain ($A_d$)** | $40.80\text{ dB}$[cite: 1] | $59.85\text{ dB}$[cite: 1] | The 2-stage achieves nearly $20\text{ dB}$ higher gain due to cascaded amplification[cite: 1]. |
+| **DC Differential Gain ($A_d$)** | $40.80\text{ dB}$ | $59.85\text{ dB}$ | The 2-stage achieves nearly $20\text{ dB}$ higher gain due to cascaded amplification. |
 | **Common Mode Gain ($A_c$)** | $-47.30\text{ dB}$[cite: 1] | $-36.80\text{ dB}$[cite: 1] | The 1-stage exhibits better raw common-mode signal suppression[cite: 1]. |
 | **CMRR** | $88.10\text{ dB}$[cite: 1] | $96.64\text{ dB}$[cite: 1] | The 2-stage achieves superior CMRR due to its massive differential gain advantage[cite: 1]. |
 | **Gain Bandwidth (GBW)** | $4.68\text{ MHz}$[cite: 1] | $30.29\text{ MHz}$[cite: 1] | The 2-stage offers an expanded frequency response range[cite: 1]. |
