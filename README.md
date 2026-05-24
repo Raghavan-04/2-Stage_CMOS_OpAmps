@@ -1,69 +1,77 @@
 
-## Design and Analysis of 1-Stage and 2-Stage CMOS Op-Amps
-Technology: gpdk180 (180nm) | Supply Voltage: 1.8V
-### Introduction
-This project explores the design, sizing, and simulation of high-performance Operational Amplifiers (Op-Amps). An Op-Amp is a high-gain differential amplifier used for signal amplification and analog processing. The repository provides a direct performance comparison between a Single-Stage Differential Pair and a Two-Stage Miller-Compensated Op-Amp.
+
+# Design and Verification of 1-Stage and 2-Stage Operational Amplifiers
+
+An analog IC design project comparing a Single-Stage Op-Amp and a Two-Stage Miller-Compensated Op-Amp using the **gpdk180 (180nm) technology node**.
+
+## 🏫 Institutional Affiliation
+* [cite_start]**College:** PSG College of Technology, Coimbatore [cite: 3, 4, 5, 6]
+* [cite_start]**Department:** Electronics and Communication Engineering / VLSI Design [cite: 1]
+* [cite_start]**Batch:** Batch 14 [cite: 1]
+
+## 👥 Project Team
+* [cite_start]**Mithun Hari** (22L232) [cite: 3]
+* [cite_start]**Raghavan** (22L255) [cite: 4]
+* [cite_start]**Vijhay Valliappan** (22L280) [cite: 5]
+* [cite_start]**Thughilan** (22L284) [cite: 6]
 
 
-### Design Specifications
-The designs were optimized for different performance targets using a 1.8V power supply:
-
-Parameter	1-Stage Target	2-Stage Target
-Technology	gpdk180	gpdk180
-Load Capacitance ($C_L$)	10 pF	2 pF
-Gain	$\ge$ 40 dB	60 dB
-Gain Bandwidth (GBW)	$\ge$ 5 MHz	30 MHz
-Slew Rate (SR)	5 V/$\mu$sec	$\ge$ 42 V/$\mu$sec
-### Design Methodology & Sizing
-The sizing of MOSFETs follows a structured analytical approach. For the two-stage design, Miller Compensation and Pole-Splitting techniques were employed to maintain stability.
-
-#### Key Design Equations
-1.  Bias Current ($I_5$): Derived from the Slew Rate requirement: $I_5 = SR \cdot C_c$. 
-2.  Transconductance ($g_m$): Defined by the GBW: $g_{m1,2} = GB \times C_c$. 
-3.  Transistor Sizing ($W/L$): Calculated using the saturation current formula: $(\frac{W}{L}) = \frac{g_m^2}{2 I_D K'_n}$. 
-
-### Simulation Results
-The designs were verified using AC analysis and transient simulations.
-
-Metric	Single-Stage Result	Two-Stage Result
-Voltage Gain	40.8 dB	59.85 dB
-Gain Bandwidth	4.69 MHz	30.3 MHz
-Phase Margin	89.5°	47.253°
-Slew Rate	5.32 V/$\mu$s	42.5 V/$\mu$s
-CMRR	88.10 dB	96.64 dB
 ---
 
-## Simulation & Verification Guide
-To reproduce these results, follow the setup for the AC Analysis (for Gain/Phase) and Transient Analysis (for Slew Rate).
-### 1. Schematic Entry
-*  Library Setup: Ensure the gpdk180 library is correctly attached to your project library. 
-*  Transistor Sizing: Enter the $(W/L)$ ratios for all MOSFETs as calculated in the design steps. 
-    *  1-Stage: M1-M2 = 7, M3-M4 = 15, M5-M6 = 13.67. 
-    *  2-Stage: M1-M2 = 6, M3-M4 = 8, M5 = 124.56, M6 = 31.14. 
-*  Bias Current: Use an ideal current source ($I_{dc}$) to provide the required tail current ($I_5$). 
+## 📌 Project Overview
+This project focuses on the complete design, transistor sizing, and simulation verification of two distinct Operational Amplifier architectures. The designs transition from foundational single-pole configurations to high-performance, stabilized multi-stage systems optimized for raw gain, speed, and noise rejection.
 
-### 2. Testbench Configuration
-Create a testbench cellview with the following components:
-*  Power Supply: Set $V_{DD}$ to 1.8V and $V_{SS}$ to ground (or -1.8V depending on your specific DC biasing). 
-*  Input Signals: For AC analysis, apply a small-signal AC voltage to the non-inverting input while keeping the inverting input at the common-mode DC level. 
-*  Load: Attach a capacitor ($C_L$) of 10 pF for the 1-stage design and 2 pF for the 2-stage design. 
-
-### 3. Running Analyses in ADE (Analog Design Environment)
-* AC Analysis:
-    *  Sweep Range: 1 Hz to 100 MHz. 
-    *  Goal: Verify DC Gain and Phase Margin (PM). 
-* Transient Analysis:
-    *  Input: Apply a large-signal square wave (e.g., 0.5V to 1.2V step). 
-    *  Goal: Measure the slope of the output voltage to calculate the Slew Rate ($SR = \frac{\Delta V}{\Delta t}$). 
-
-### 4. Expected Results & Validation
-Your simulated outputs should closely match the project benchmarks:
-*  Single-Stage: You should see a highly stable response (PM $\approx$ 89°) with a gain of roughly 40.8 dB. 
-*  Two-Stage: Expect a much higher gain ($\approx$ 60 dB) but observe the phase shift caused by the second stage, requiring the Miller capacitor ($C_c$) to keep PM above 45°. 
+### 📐 Process Parameters Used
+* **NMOS:** $V_{tn} = 0.49\text{ V}$, $K_{n}' = 325\text{ }\mu\text{A/V}^2$
+* **PMOS:** $V_{tp} = -0.46\text{ V}$, $K_{p}' = 63\text{ }\mu\text{A/V}^2$
 
 ---
-### Key Takeaways
-*  High Gain vs. Stability: The two-stage design provides a significant boost in gain (nearly +20 dB) but requires careful compensation to avoid a low phase margin. 
-*  Speed: The two-stage architecture is significantly faster, offering nearly 8x the Slew Rate of the single-stage design. 
-*  Precision: The two-stage design is better suited for precision applications due to its higher CMRR and amplification. 
 
+## 📊 Performance Matrix (Simulated vs. Compared)
+
+| Performance Parameter | 1-Stage Op-Amp | 2-Stage Op-Amp |
+| :--- | :---: | :---: |
+| **DC Differential Gain ($A_d$)** | 40.80 dB | 59.85 dB |
+| **Common Mode Gain ($A_c$)** | -47.30 dB | -36.79 dB |
+| **CMRR** | 88.10 dB | 96.64 dB |
+| **Gain Bandwidth (GBW)** | 4.68 MHz | 30.29 MHz |
+| **Phase Margin (PM)** | ~89.5° | 47.25° |
+| **Slew Rate (SR)** | 5.32 V/μs | 42.50 V/μs |
+
+---
+
+## 🛠️ Circuit Architectures & Sizing
+
+### 1. Single-Stage Op-Amp
+A single-pole architecture utilizing a dual-input balanced-output differential amplifier paired with current mirrors to guarantee high common-mode rejection.
+
+* **Final Aspect Ratios:** 
+  * Differential Input Pair ($M1, M2$): $W/L = 7$
+  * Active Load Mirrors ($M3, M4$): $W/L = 15$
+  * Tail Current Mirrors ($M5, M6$): $W/L = 13.67$
+* **Schematic & Waveforms:**
+  <p>
+    <img src="1_stage_schematic.png" width="45%" />
+    <img src="1_stage_waveforms.png" width="45%" />
+  </p>
+
+### 2. Two-Stage Op-Amp (Miller Compensated)
+An advanced architecture splitting the voltage amplification across two stages to maximize gain, implementing **Miller Compensation ($C_c$)** and **Pole-Splitting** to isolate the dominant and non-dominant poles for high-frequency loop stability.
+
+* **Final Aspect Ratios:**
+  * $M1, M2 = 6$ | $M3, M4 = 8$ | $M5 = 124.56$ | $M6 = 31.14$ | $M7, M8 = 4$
+* **Schematic & Waveforms:**
+  <p>
+    <img src="2_stage_schematic.png" width="45%" />
+    <img src="2_stage_waveforms.png" width="45%" />
+  </p>
+
+---
+
+## 💡 Key Engineering Insights & Trade-offs
+1. **The Stability vs. Gain Trade-off:** The 1-stage design behaves as a highly stable, inherently safe single-pole system ($PM \approx 89.5^\circ$), but its open-loop gain is brick-walled at $40.8\text{ dB}$. Adding a second stage safely pushes the gain up by nearly $20\text{ dB}$ ($59.85\text{ dB}$) and vastly widens the operating bandwidth to $30.3\text{ MHz}$, though it demands careful compensation to stay stable ($PM = 47.25^\circ$).
+2. **Transient Performance:** By optimizing the inner stage charging currents through Miller compensation network equations, the 2-stage design achieves a blistering **8x boost in Slew Rate** ($42.5\text{ V/}\mu\text{s}$) compared to the single-stage variant ($5.32\text{ V/}\mu\text{s}$).
+
+## ⚙️ CAD Tools Used
+* **Cadence Virtuoso** (Schematic Capture)
+* **Spectre Simulation Platform** (AC & Transient Analysis)
