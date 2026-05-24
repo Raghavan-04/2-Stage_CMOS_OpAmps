@@ -5,15 +5,15 @@
 An analog IC design project comparing a Single-Stage Op-Amp and a Two-Stage Miller-Compensated Op-Amp using the **gpdk180 (180nm) technology node**.
 
 ## 🏫 Institutional Affiliation
-* [cite_start]**College:** PSG College of Technology, Coimbatore [cite: 3, 4, 5, 6]
-* [cite_start]**Department:** Electronics and Communication Engineering / VLSI Design [cite: 1]
-* [cite_start]**Batch:** Batch 14 [cite: 1]
+* **College:** PSG College of Technology, Coimbatore 
+* **Department:** Electronics and Communication Engineering / VLSI Design 
+* **Batch:** Batch 14 
 
 ## 👥 Project Team
-* [cite_start]**Mithun Hari** (22L232) [cite: 3]
-* [cite_start]**Raghavan** (22L255) [cite: 4]
-* [cite_start]**Vijhay Valliappan** (22L280) [cite: 5]
-* [cite_start]**Thughilan** (22L284) [cite: 6]
+* **Mithun Hari** (22L232) 
+* **Raghavan** (22L255) 
+* **Vijhay Valliappan** (22L280) 
+* **Thughilan** (22L284) 
 
 
 ---
