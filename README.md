@@ -26,17 +26,16 @@ A typical internal multi-stage structure of an operational amplifier consists of
 </p>
 
 ---
-
 ## 📊 Comparative Performance Matrix
 
 | Performance Parameter | 1-Stage Op-Amp | 2-Stage Op-Amp | Analysis & Insights |
-| :--- | :---: | :---: | :--- |
-| **DC Differential Gain ($A_d$)** | $40.80\text{ dB}$ | $59.85\text{ dB}$ | The 2-stage achieves nearly $20\text{ dB}$ higher gain due to cascaded amplification. |
-| **Common Mode Gain ($A_c$)** | $-47.30\text{ dB}$ | $-36.80\text{ dB}$ | The 1-stage exhibits better raw common-mode signal suppression. |
-| **CMRR** | $88.10\text{ dB}$ | $96.64\text{ dB}$ | The 2-stage achieves superior CMRR due to its massive differential gain advantage. |
-| **Gain Bandwidth (GBW)** | $4.68\text{ MHz}$ | $30.29\text{ MHz}$ | The 2-stage offers an expanded frequency response range. |
-| **Phase Margin (PM)** | $\approx 89.5^\circ$ | $47.25^\circ$ | The 1-stage is unconditionally stable; the 2-stage trades PM for bandwidth. |
-| **Slew Rate (SR)** | $5.32\text{ V/}\mu\text{s}$ | $42.50\text{ V/}\mu\text{s}$ | The 2-stage handles fast large-signal transient changes significantly faster. |
+|:---|:---:|:---:|:---|
+| **DC Differential Gain (Ad)** | 40.80 dB | 59.85 dB | The 2-stage achieves nearly 20 dB higher gain due to cascaded amplification. |
+| **Common Mode Gain (Ac)** | -47.30 dB | -36.80 dB | The 1-stage exhibits better raw common-mode signal suppression. |
+| **CMRR** | 88.10 dB | 96.64 dB | The 2-stage achieves superior CMRR due to its massive differential gain advantage. |
+| **Gain Bandwidth (GBW)** | 4.68 MHz | 30.29 MHz | The 2-stage offers an expanded frequency response range. |
+| **Phase Margin (PM)** | ≈89.5° | 47.25° | The 1-stage is unconditionally stable; the 2-stage trades PM for bandwidth. |
+| **Slew Rate (SR)** | 5.32 V/µs | 42.50 V/µs | The 2-stage handles fast large-signal transient changes significantly faster. |
 
 ---
 
