@@ -5,7 +5,6 @@ An analog IC design project comparing a Single-Stage Op-Amp and a Two-Stage Mill
 
 ## 🏫 Institutional Affiliation
 * **College:** PSG College of Technology, Coimbatore
-* **Batch:** Batch 14
 
 ## 👥 Project Team
 * **Mithun Hari** (22L232)
@@ -54,10 +53,12 @@ The single-stage architecture implements a dual-input balanced-output differenti
 </p>
 
 ### 📈 AC Characterization Waveforms
+**Phase Gain**
 <p align="center">
   <img src="1_stage_gain_phase.png" width="85%" alt="1-Stage Gain and Phase Margin" />
 </p>
-
+**1. Differential Gain**
+**2. Common Gain**
 <p align="center">
   <img src="1_stage_differential_gain.png" width="48%" alt="1-Stage Differential Gain" />
   <img src="1_stage_common_gain.png" width="48%" alt="1-Stage Common Mode Gain" />
