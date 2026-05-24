@@ -21,7 +21,7 @@ This project focuses on the comparative analysis, transistor sizing, and simulat
 A typical internal multi-stage structure of an operational amplifier consists of an input differential stage, intermediate gain stage, level shifter, and an output buffer stage[cite: 1].
 
 <p align="center">
-  <img src="block_diagram.jpg" width="85%" alt="Op-Amp Block Diagram" />
+  <img src="block_diagram.png" width="85%" alt="Op-Amp Block Diagram" />
 </p>
 
 ---
@@ -55,12 +55,12 @@ The single-stage architecture implements a dual-input balanced-output differenti
 
 ### 📈 AC Characterization Waveforms
 <p align="center">
-  <img src="1_stage_gain_phase.jpg" width="85%" alt="1-Stage Gain and Phase Margin" />
+  <img src="1_stage_gain_phase.png" width="85%" alt="1-Stage Gain and Phase Margin" />
 </p>
 
 <p align="center">
-  <img src="1_stage_differential_gain.jpg" width="48%" alt="1-Stage Differential Gain" />
-  <img src="1_stage_common_gain.jpg" width="48%" alt="1-Stage Common Mode Gain" />
+  <img src="1_stage_differential_gain.png" width="48%" alt="1-Stage Differential Gain" />
+  <img src="1_stage_common_gain.png" width="48%" alt="1-Stage Common Mode Gain" />
 </p>
 
 ---
@@ -74,17 +74,17 @@ The two-stage configuration splits voltage amplification into an initial input d
 
 ### 🖥️ Schematic Capture
 <p align="center">
-  <img src="2_stage_schematic.jpg" width="85%" alt="2-Stage Schematic" />
+  <img src="2_stage_schematic.png" width="85%" alt="2-Stage Schematic" />
 </p>
 
 ### 📈 AC Characterization Waveforms
 <p align="center">
-  <img src="2_stage_gain_phase.jpg" width="85%" alt="2-Stage Gain and Phase Margin" />
+  <img src="2_stage_gain_phase.png" width="85%" alt="2-Stage Gain and Phase Margin" />
 </p>
 
 <p align="center">
-  <img src="2_stage_differential_gain.jpg" width="48%" alt="2-Stage Differential Gain" />
-  <img src="2_stage_common_gain.jpg" width="48%" alt="2-Stage Common Mode Gain" />
+  <img src="2_stage_differential_gain.png" width="48%" alt="2-Stage Differential Gain" />
+  <img src="2_stage_common_gain.png" width="48%" alt="2-Stage Common Mode Gain" />
 </p>
 
 ---
