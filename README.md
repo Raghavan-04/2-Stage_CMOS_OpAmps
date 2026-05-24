@@ -47,7 +47,7 @@ The single-stage architecture implements a dual-input balanced-output differenti
 * **Active Load Mirrors ($M3, M4$):** $W/L = 15$
 * **Tail Current Mirrors ($M5, M6$):** $W/L = 13.67$
 
-### 🖥️ Schematic Capture
+### Schematic Capture
 <p align="center">
   <img src="1_stage_schematic.png" width="85%" alt="1-Stage Schematic" />
 </p>
@@ -58,7 +58,7 @@ The single-stage architecture implements a dual-input balanced-output differenti
   <img src="1_stage_gain_phase.png" width="85%" alt="1-Stage Gain and Phase Margin" />
 </p>
 
-** Differential Gain & Common Gain **
+**Differential Gain** **& Common Gain**
 
 
 
@@ -88,7 +88,8 @@ The two-stage configuration splits voltage amplification into an initial input d
 <p align="center">
   <img src="2_stage_gain_phase.png" width="85%" alt="2-Stage Gain and Phase Margin" />
 </p>
-** Differential Gain & Common Gain **
+
+**Differential Gain** **& Common Gain**
 
 <p align="center">
   <img src="2_stage_differential_gain.png" width="48%" alt="2-Stage Differential Gain" />
