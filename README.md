@@ -107,4 +107,4 @@ The two-stage configuration splits voltage amplification into an initial input d
 * **Spectre Simulation Platform** (AC, Transient, & Common Mode Analysis)
 
 ---
-> 📝 **Note on Project Status:** Due to a routine server reset on the college lab workstations, the live Cadence schematic databases and simulation netlist directories were flushed. This repository serves as the definitive structural and graphical backup of the analytical models, project slides (`final.pptx`), and simulated hardware performance verification graphs generated during the design cycle.
+> 📝 **Note on Project Status:** Due to a routine server reset on the college lab workstations, the live Cadence schematic databases and simulation netlist directories were flushed. This repository serves as the definitive structural and graphical backup of the analytical models, project slides (`FINAL Draft.pdf`), and simulated hardware performance verification graphs generated during the design cycle.
